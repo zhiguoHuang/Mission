@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta http-equiv=Content-Type content="text/html;charset=utf-8">
+    <meta charset="gbk">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <title>报表钉钉免登录</title>
+
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <!--<script src="https://g.alicdn.com/dingding/dingtalk-jsapi/2.10.3/dingtalk.open.js"></script>-->
+
+
+</head>
+<body>
+<script>
+    // dd.ready(function() {
+    //
+    //     dd.runtime.permission.requestAuthCode({
+    //         corpId:"ding4f9ac47a6ab819b935c2f4657eb6378f",
+    //
+    //         onSuccess: function (result) {
+
+                $.ajax({
+                    url:'https://authapi.nhgre.com/api/dingding/DD/DDLoginReport',
+                    dataType:"jsonp",
+                    data:{code:1},
+                    jsonp:"callback",
+                    timeout:5000,//超时时间（单位：毫秒）
+                    contentType: "application/json",
+                    success : function(data, status, xhr) {
+                        window.location =data.url;
+
+                    },
+                    error : function(xhr, errorType, error) {
+                        alert(errorType + ', ' + error);
+                    }
+                });
+
+    //             // 调用成功时回调
+    //             console.log(result)
+    //         },
+    //         onFail: function (err) {
+    //             // 调用失败时回调
+    //             console.log(err)
+    //         }
+    //     });
+    // });
+</script>
+</body>
+</html>
