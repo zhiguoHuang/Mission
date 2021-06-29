@@ -1,4 +1,4 @@
-package com.grandblue.dingding.config;
+package com.guo.keepHard.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

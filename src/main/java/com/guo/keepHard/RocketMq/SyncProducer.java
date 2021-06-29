@@ -1,4 +1,4 @@
-package com.grandblue.dingding.rocketMq;
+package com.guo.keepHard.RocketMq;
 
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendResult;
